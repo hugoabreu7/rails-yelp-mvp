@@ -15,3 +15,13 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "texts";
+
+body {
+  padding: 10px;
+  height: 100%;
+  background: linear-gradient(rgba(115, 226, 167, 0.4), rgba(236, 243, 158, 0.7));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgba(50, 50, 50, 0.9);
+}

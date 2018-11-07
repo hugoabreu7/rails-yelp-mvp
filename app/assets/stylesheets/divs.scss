@@ -1,0 +1,30 @@
+.box {
+  padding: 6px 0px 6px 0px;
+  margin: 0px 0px 2px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 0px 0px 10px 0px;
+  &:hover {
+    background: rgba(100, 200, 120, 0.3)
+  }
+}
+
+.hover {
+  text-align: center;
+  font-size: 18px;
+  &:hover {
+    color: rgba(60, 60, 60, 0.6);
+  }
+}
