@@ -1,3 +1,14 @@
 <h1>Welcome to <%= @restaurant.name %>!</h1>
 <p> This is a <%= @restaurant.category %> restaurant located in <%= @restaurant.address %>! </p>
+
+<p> Add a review </p>
+
+<ul>
+<% @reviews.each do |review| %>
+<li> <%= review.content %> </li>
+<% end %>
+</ul>
+
+<%= link_to "Add a review", new_restaurant_review_path(@restaurant) %>
+
 <div style="text-align: center"> <p class="btn btn-warning"><%= link_to "Please take me back 😢", restaurants_path %></p></div>

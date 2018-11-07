@@ -1,11 +1,15 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurant = Restaurant.new
     @restaurants = Restaurant.all
+  end
+
+  def new
+    @restaurant = Restaurant.new
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @reviews = Review.where(restaurant_id: params[:id])
   end
 
   def create
@@ -13,8 +17,7 @@ class RestaurantsController < ApplicationController
     if @restaurant.save
       redirect_to restaurant_path(@restaurant)
     else
-      @restaurants = Restaurant.all
-      render :index
+      render :new
     end
   end
 
